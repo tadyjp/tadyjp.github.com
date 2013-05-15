@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Oh! my tady]]></title>
-  <link href="http://blog.tady.jp/atom.xml" rel="self"/>
+  <title><![CDATA[Category: test | Oh! my tady]]></title>
+  <link href="http://blog.tady.jp/blog/categories/test/atom.xml" rel="self"/>
   <link href="http://blog.tady.jp/"/>
   <updated>2013-05-16T01:47:39+09:00</updated>
   <id>http://blog.tady.jp/</id>

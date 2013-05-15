@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://tadyjp.github.io/sitemap.xml 
+Sitemap: http://blog.tady.jp/sitemap.xml 
