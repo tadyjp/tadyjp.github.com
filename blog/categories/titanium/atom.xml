@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Oh! my tady]]></title>
-  <link href="http://blog.tady.jp/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Titanium | Oh! my tady]]></title>
+  <link href="http://blog.tady.jp/blog/categories/titanium/atom.xml" rel="self"/>
   <link href="http://blog.tady.jp/"/>
   <updated>2013-05-17T00:14:46+09:00</updated>
   <id>http://blog.tady.jp/</id>
@@ -38,7 +38,7 @@
 <p>最初はアーキテクチャーの話。正直あまり興味は無かった。</p>
 
 <p>その後にWeb Applicationの話。
-&ldquo;Web Runtime&#8221;とか、windowsメトロアプリを彷彿とさせる。
+&ldquo;Web Runtime"とか、windowsメトロアプリを彷彿とさせる。
 jQueryMobile baseのUIが使えるのか。</p>
 
 <p>Tizenとwebkitとchromeエンジンと
@@ -120,39 +120,6 @@ Helpサービス</p>
 <li>Uber, Taxi配車</li>
 <li>サーバ障害で電話する</li>
 <li>目覚まし電話</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[OctopressとGithubでブログを構築したよ]]></title>
-    <link href="http://blog.tady.jp/posts/2013/05/15/first-post-of-octopress"/>
-    <updated>2013-05-15T00:34:00+09:00</updated>
-    <id>http://blog.tady.jp/posts/2013/05/15/first-post-of-octopress</id>
-    <content type="html"><![CDATA[<h1>テスト投稿</h1>
-
-<p>本文はmarkdownで書いています</p>
-
-<h1>詳しい導入方法は</h1>
-
-<p>まだ後日書きます</p>
-
-<h1>やったこと</h1>
-
-<ul>
-<li>Google Analyticsの導入</li>
-<li>Google Web Master Toolの導入</li>
-</ul>
-
-
-<h1>この後やること</h1>
-
-<ul>
-<li>旧ブログからの移行</li>
-<li>テーマ変更</li>
-<li><a href="http://jashkenas.github.io/docco/">docco</a>デザインの導入</li>
-<li>sitemap_generator.rbを修正、googleに送信するように</li>
 </ul>
 
 ]]></content>
