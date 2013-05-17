@@ -8,11 +8,53 @@
 	<meta name="author" content="tady">
 
 	
-	<meta name="description" content="自己紹介 名前 多田まさと プログラミング ruby, rails
-javascript
-scala
-mahout
-php, python, perl twitter @tady_jp facebook tady.jp Google+ https://plus.google.com/ &hellip;">
+	<meta name="description" content="1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44 #
+### 自己紹介
+#
+class &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -89,48 +131,96 @@ php, python, perl twitter @tady_jp facebook tady.jp Google+ https://plus.google.
     
     <h1 class="title">Self-introduction</h1>
     
-    <div class="entry-content"><h1>自己紹介</h1>
+    <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>#
+</span><span class='line'>### 自己紹介
+</span><span class='line'>#
+</span><span class='line'>class SelfIntroduction &lt; Tady
+</span><span class='line'>  include Web::Programmer
+</span><span class='line'>  include DataScientist::Engineer
+</span><span class='line'>
+</span><span class='line'>  good_at :ruby, :rails, :js, :titanium, :python
+</span><span class='line'>  studing :scala, :mahout
+</span><span class='line'>  bad_at  :php, :java, :perl
+</span><span class='line'>
+</span><span class='line'>  def initialize
+</span><span class='line'>    @me ||= +1/0.0
+</span><span class='line'>  end
+</span><span class='line'>
+</span><span class='line'>  def twitter
+</span><span class='line'>    [@tady_jp](http://twitter.com/tady_jp)
+</span><span class='line'>  end
+</span><span class='line'>
+</span><span class='line'>  def facebook
+</span><span class='line'>    [tady.jp](http://www.facebook.com/tady.jp)
+</span><span class='line'>  end
+</span><span class='line'>
+</span><span class='line'>  #
+</span><span class='line'>  ### 勤務先
+</span><span class='line'>  ## 株式会社じげん
+</span><span class='line'>  #
+</span><span class='line'>  def employment
+</span><span class='line'>    at [株式会社じげん](http://zigexn.co.jp) from: 2012
+</span><span class='line'>  end
+</span><span class='line'>
+</span><span class='line'>  #
+</span><span class='line'>  ### 大学
+</span><span class='line'>  ## 学部
+</span><span class='line'>  #  京都大学 理学部 化学科  卒業
+</span><span class='line'>  #
+</span><span class='line'>  ### 大学飲
+</span><span class='line'>  #  東京大学大学院 学際情報学府  中退
+</span><span class='line'>  #
+</span><span class='line'>  def university
+</span><span class='line'>    at KyotoUniversity::FacultyOfScience::Chemistry.graduated from: 2007, to: 2011
+</span><span class='line'>    at UniversityOfTokyo::GradSchool::III.dropouted           from: 2011, to: 2013
+</span><span class='line'>  end
+</span></code></pre></td></tr></table></div></figure>
 
-<h2>名前</h2>
-
-<p>多田まさと</p>
-
-<h2>プログラミング</h2>
-
-<ul>
-<li>ruby, rails</li>
-<li>javascript</li>
-<li>scala</li>
-<li>mahout</li>
-<li>php, python, perl</li>
-</ul>
-
-
-<h2>twitter</h2>
-
-<p><a href="http://twitter.com/tady_jp">@tady_jp</a></p>
-
-<h2>facebook</h2>
-
-<p><a href="http://www.facebook.com/tady.jp">tady.jp</a></p>
-
-<h2>Google+</h2>
-
-<p><a href="https://plus.google.com/117911794355270878600">https://plus.google.com/117911794355270878600</a></p>
-
-<h2>勤務先</h2>
-
-<p><a href="http://zigexn.co.jp">株式会社じげん</a></p>
-
-<h2>大学</h2>
-
-<h3>学部</h3>
-
-<p>京都大学 理学部 化学科  卒業</p>
-
-<h3>大学飲</h3>
-
-<p>東京大学大学院 学際情報学府  中退</p>
 </div>
 </article>
 
