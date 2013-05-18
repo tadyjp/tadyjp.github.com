@@ -51,7 +51,7 @@
 41
 42
 43
-44 #
+#
 ### 自己紹介
 #
 class &hellip;">
@@ -131,7 +131,7 @@ class &hellip;">
     
     <h1 class="title">Self-introduction</h1>
     
-    <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+    <div class="entry-content"><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -174,51 +174,49 @@ class &hellip;">
 <span class='line-number'>41</span>
 <span class='line-number'>42</span>
 <span class='line-number'>43</span>
-<span class='line-number'>44</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>#
-</span><span class='line'>### 自己紹介
-</span><span class='line'>#
-</span><span class='line'>class SelfIntroduction &lt; Tady
-</span><span class='line'>  include Web::Programmer
-</span><span class='line'>  include DataScientist::Engineer
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#</span>
+</span><span class='line'><span class="c1">### 自己紹介</span>
+</span><span class='line'><span class="c1">#</span>
+</span><span class='line'><span class="k">class</span> <span class="nc">SelfIntroduction</span> <span class="o">&lt;</span> <span class="no">Tady</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">Web</span><span class="p">:</span><span class="ss">:Programmer</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">DataScientist</span><span class="p">:</span><span class="ss">:Engineer</span>
 </span><span class='line'>
-</span><span class='line'>  good_at :ruby, :rails, :js, :titanium, :python
-</span><span class='line'>  studing :scala, :mahout
-</span><span class='line'>  bad_at  :php, :java, :perl
+</span><span class='line'>  <span class="n">good_at</span> <span class="ss">:ruby</span><span class="p">,</span> <span class="ss">:rails</span><span class="p">,</span> <span class="ss">:js</span><span class="p">,</span> <span class="ss">:titanium</span><span class="p">,</span> <span class="ss">:python</span>
+</span><span class='line'>  <span class="n">studing</span> <span class="ss">:scala</span><span class="p">,</span> <span class="ss">:mahout</span>
+</span><span class='line'>  <span class="n">bad_at</span>  <span class="ss">:php</span><span class="p">,</span> <span class="ss">:java</span><span class="p">,</span> <span class="ss">:perl</span>
 </span><span class='line'>
-</span><span class='line'>  def initialize
-</span><span class='line'>    @me ||= +1/0.0
-</span><span class='line'>  end
+</span><span class='line'>  <span class="k">def</span> <span class="nf">initialize</span>
+</span><span class='line'>    <span class="vi">@potential</span> <span class="o">||=</span> <span class="o">+</span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span>
+</span><span class='line'>  <span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'>  def twitter
-</span><span class='line'>    [@tady_jp](http://twitter.com/tady_jp)
-</span><span class='line'>  end
+</span><span class='line'>  <span class="k">def</span> <span class="nf">twitter</span>
+</span><span class='line'>    <span class="o">[</span><span class="vi">@tady_jp</span><span class="o">]</span><span class="p">(</span><span class="ss">http</span><span class="p">:</span><span class="sr">//</span><span class="n">twitter</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">tady_jp</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'>  def facebook
-</span><span class='line'>    [tady.jp](http://www.facebook.com/tady.jp)
-</span><span class='line'>  end
+</span><span class='line'>  <span class="k">def</span> <span class="nf">facebook</span>
+</span><span class='line'>    <span class="o">[</span><span class="n">tady</span><span class="o">.</span><span class="n">jp</span><span class="o">]</span><span class="p">(</span><span class="ss">http</span><span class="p">:</span><span class="sr">//</span><span class="n">www</span><span class="o">.</span><span class="n">facebook</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">tady</span><span class="o">.</span><span class="n">jp</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'>  #
-</span><span class='line'>  ### 勤務先
-</span><span class='line'>  ## 株式会社じげん
-</span><span class='line'>  #
-</span><span class='line'>  def employment
-</span><span class='line'>    at [株式会社じげん](http://zigexn.co.jp) from: 2012
-</span><span class='line'>  end
+</span><span class='line'>  <span class="c1">#</span>
+</span><span class='line'>  <span class="c1">### 勤務先</span>
+</span><span class='line'>  <span class="c1">## 株式会社じげん</span>
+</span><span class='line'>  <span class="c1">#</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">employment</span>
+</span><span class='line'>    <span class="n">at</span> <span class="o">[</span><span class="err">株式会社じげん</span><span class="o">]</span><span class="p">(</span><span class="ss">http</span><span class="p">:</span><span class="sr">//</span><span class="n">zigexn</span><span class="o">.</span><span class="n">co</span><span class="o">.</span><span class="n">jp</span><span class="p">)</span> <span class="ss">from</span><span class="p">:</span> <span class="mi">2012</span>
+</span><span class='line'>  <span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'>  #
-</span><span class='line'>  ### 大学
-</span><span class='line'>  ## 学部
-</span><span class='line'>  #  京都大学 理学部 化学科  卒業
-</span><span class='line'>  #
-</span><span class='line'>  ### 大学飲
-</span><span class='line'>  #  東京大学大学院 学際情報学府  中退
-</span><span class='line'>  #
-</span><span class='line'>  def university
-</span><span class='line'>    at KyotoUniversity::FacultyOfScience::Chemistry.graduated from: 2007, to: 2011
-</span><span class='line'>    at UniversityOfTokyo::GradSchool::III.dropouted           from: 2011, to: 2013
-</span><span class='line'>  end
+</span><span class='line'>  <span class="c1">#</span>
+</span><span class='line'>  <span class="c1">### 大学</span>
+</span><span class='line'>  <span class="c1">## 学部</span>
+</span><span class='line'>  <span class="c1">#  京都大学 理学部 化学科  卒業</span>
+</span><span class='line'>  <span class="c1">#</span>
+</span><span class='line'>  <span class="c1">### 大学飲</span>
+</span><span class='line'>  <span class="c1">#  東京大学大学院 学際情報学府  中退</span>
+</span><span class='line'>  <span class="c1">#</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">university</span>
+</span><span class='line'>    <span class="n">at</span> <span class="ss">KyotoUniversity</span><span class="p">:</span><span class="ss">:FacultyOfScience</span><span class="o">::</span><span class="no">Chemistry</span><span class="o">.</span><span class="n">graduated</span> <span class="ss">from</span><span class="p">:</span> <span class="mi">2007</span><span class="p">,</span> <span class="ss">to</span><span class="p">:</span> <span class="mi">2011</span>
+</span><span class='line'>    <span class="n">at</span> <span class="ss">UniversityOfTokyo</span><span class="p">:</span><span class="ss">:GradSchool</span><span class="o">::</span><span class="no">III</span><span class="o">.</span><span class="n">dropouted</span>           <span class="ss">from</span><span class="p">:</span> <span class="mi">2011</span><span class="p">,</span> <span class="ss">to</span><span class="p">:</span> <span class="mi">2013</span>
+</span><span class='line'>  <span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure>
 
 </div>
