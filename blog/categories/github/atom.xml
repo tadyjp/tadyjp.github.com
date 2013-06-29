@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: github | Oh! my tady]]></title>
+  <link href="http://blog.tady.jp/blog/categories/github/atom.xml" rel="self"/>
+  <link href="http://blog.tady.jp/"/>
+  <updated>2013-06-29T18:44:51+09:00</updated>
+  <id>http://blog.tady.jp/</id>
+  <author>
+    <name><![CDATA[tady]]></name>
+    <email><![CDATA[a.dat.jp@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[ssh-agentを使って公開鍵認証無しにcapistranoでgithubからdeployする]]></title>
+    <link href="http://blog.tady.jp/posts/2013/06/29/capistrano-plus-github-plus-ssh-agent"/>
+    <updated>2013-06-29T18:00:00+09:00</updated>
+    <id>http://blog.tady.jp/posts/2013/06/29/capistrano-plus-github-plus-ssh-agent</id>
+    <content type="html"><![CDATA[<h1>この記事の対象</h1>
+
+<ul>
+<li>railsプロジェクトをcapistranoでdeployしている人</li>
+<li>deploy対象のコードがgithubのprivateレポジトリで運用されている人</li>
+<li>chef-soloを使ってサーバ運用している人</li>
+</ul>
+
+
+<h1>chef-soloの導入</h1>
+
+<p>最近社内に導入された <code>chef-solo</code> によってappサーバの冗長化が簡単になりました。
+サーバ毎に異なる設定も <code>role</code> や <code>attributes</code> などの仕組みを使うことで簡単に扱うことが出来ます。
+しかし、ひとつぶち当たった壁が、 <strong>sshの鍵をどうしようか</strong>という点でした。</p>
+
+<h1>githubからの直接deploy</h1>
+
+<p>あるサービスでは、アプリケーションコードをgithubのprivateレポジトリで運用しています。
+githubは自身の公開鍵をweb上から登録することでパスフレーズなしにgitへのアクセスができます。</p>
+
+<p>ここで起こった問題が、
+<code>
+githubの鍵をすべてのサーバで作るのめんどくせ o ○(´・ω・`)
+</code></p>
+
+<h1>ssh agent forwardingというトリック</h1>
+
+<p><a href="https://help.github.com/articles/using-ssh-agent-forwarding">https://help.github.com/articles/using-ssh-agent-forwarding</a></p>
+
+<p>よく調べてみると、githubのドキュメントに<code>ssh agent forwarding</code>という項目がありました。
+こんなめんどくさいことがcapistranoやgithubで対応されていないはずがありません。</p>
+
+<p>なにやら、この<code>ssh agent forwarding</code>を使うと、ローカル(手元の開発機)の秘密鍵をリモート(本番機)でも使えるようになるらしいです。</p>
+
+<h1>設定</h1>
+
+<h2>1. [ローカル] ssh configの設定</h2>
+
+<p>ローカルの<code>~/.ssh/config</code>で本番機へのssh設定に<code>ForwardAgent</code>設定を加えます。</p>
+
+<p>```</p>
+
+<h1>~/.ssh/config</h1>
+
+<p>Host server.example.com
+  &hellip;
+  ForwardAgent yes
+```</p>
+
+<h2>2. [ローカル] ssh-agent機能を設定</h2>
+
+<p><code>ssh agent</code>が動くために<code>ssh-add</code>を実行します。</p>
+
+<p><code>
+ssh-add ~/.ssh/id_rsa
+</code></p>
+
+<p><code>ssh-add -L</code>を実行して鍵が表示されれば成功です</p>
+
+<p><code>
+$&gt; ssh-add -L
+ssh-rsa AFEVB3Nd4C1......
+</code></p>
+
+<h2>3. [リモート] ssh-agent機能を確認</h2>
+
+<p>この状態でリモートに対してsshをつなぐと、その接続で<code>ssh agent forwarding</code>が動いています。</p>
+
+<p>確認してみましょう。</p>
+
+<p>```
+ssh server.example.com</p>
+
+<p>~~~~
+ssh -T <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#116;&#64;&#x67;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;</a>
+Hi &lt;githubのユーザー名>! You&rsquo;ve successfully authenticated, but GitHub does not provide shell access.
+```</p>
+
+<p>なんということでしょう！秘密鍵が無いはずのリモートでgithubへのsshが通っています！</p>
+
+<p>これでリモートでgithubからコードを落とすことが出来ます。</p>
+
+<h2>4. capistranoで<code>ssh agent</code>を使う</h2>
+
+<p>ここまで来ると後はcapistrano(内部的にsshを利用している)でも<code>ssh agent</code>を有効にするだけです。</p>
+
+<p>```</p>
+
+<h1>config/deploy.rb</h1>
+
+<p>set :ssh_options, :forward_agent => true
+set :repository, &ldquo;git@github.com:xxxxxxxxxx.git&rdquo;
+set :deploy_via, :remote_cache
+set :git_shallow_clone, 1
+```</p>
+
+<p>これで<code>cap deploy</code>でgithubからdeployできます。</p>
+
+<p>以上です。</p>
+]]></content>
+  </entry>
+  
+</feed>
