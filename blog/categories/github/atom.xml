@@ -4,7 +4,7 @@
   <title><![CDATA[Category: github | Oh! my tady]]></title>
   <link href="http://blog.tady.jp/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://blog.tady.jp/"/>
-  <updated>2013-06-29T18:44:51+09:00</updated>
+  <updated>2013-06-29T18:52:56+09:00</updated>
   <id>http://blog.tady.jp/</id>
   <author>
     <name><![CDATA[tady]]></name>
@@ -92,7 +92,7 @@ ssh-rsa AFEVB3Nd4C1......
 ssh server.example.com</p>
 
 <p>~~~~
-ssh -T <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#116;&#64;&#x67;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;</a>
+ssh -T <a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#103;&#x69;&#x74;&#x40;&#x67;&#105;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#111;&#x6d;">&#x67;&#x69;&#x74;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;</a>
 Hi &lt;githubのユーザー名>! You&rsquo;ve successfully authenticated, but GitHub does not provide shell access.
 ```</p>
 
