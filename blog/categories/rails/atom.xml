@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: capistrano | Oh! my tady]]></title>
-  <link href="http://blog.tady.jp/blog/categories/capistrano/atom.xml" rel="self"/>
+  <title><![CDATA[Category: rails | Oh! my tady]]></title>
+  <link href="http://blog.tady.jp/blog/categories/rails/atom.xml" rel="self"/>
   <link href="http://blog.tady.jp/"/>
   <updated>2013-08-14T01:21:18+09:00</updated>
   <id>http://blog.tady.jp/</id>
@@ -92,7 +92,7 @@ ssh-rsa AFEVB3Nd4C1......
 ssh server.example.com</p>
 
 <p>~~~~
-ssh -T <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x67;&#105;&#116;&#64;&#103;&#x69;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#98;&#46;&#x63;&#x6f;&#x6d;</a>
+ssh -T <a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#x67;&#x69;&#x74;&#x40;&#x67;&#105;&#116;&#104;&#117;&#98;&#x2e;&#99;&#111;&#109;">&#x67;&#x69;&#116;&#64;&#103;&#x69;&#116;&#x68;&#x75;&#98;&#46;&#x63;&#111;&#x6d;</a>
 Hi &lt;githubのユーザー名>! You&rsquo;ve successfully authenticated, but GitHub does not provide shell access.
 ```</p>
 
