@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: SublimeText | Oh! my tady]]></title>
+  <link href="http://blog.tady.jp/blog/categories/sublimetext/atom.xml" rel="self"/>
+  <link href="http://blog.tady.jp/"/>
+  <updated>2013-08-17T15:45:35+09:00</updated>
+  <id>http://blog.tady.jp/</id>
+  <author>
+    <name><![CDATA[tady]]></name>
+    <email><![CDATA[a.dat.jp@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[SublimeText2でGuardfileなどに色を付ける - Colorize unregistered format file like 'Guardfile' in SublimeText]]></title>
+    <link href="http://blog.tady.jp/posts/2013/08/17/sublimetext2-guardfile-format"/>
+    <updated>2013-08-17T15:10:00+09:00</updated>
+    <id>http://blog.tady.jp/posts/2013/08/17/sublimetext2-guardfile-format</id>
+    <content type="html"><![CDATA[<p><img src="/images/posts/130817-guard/4.png" alt="4" /></p>
+
+<h1>この記事の対象 &ndash; Target of this post.</h1>
+
+<ul>
+<li>SublimeText2でRails開発をしている人</li>
+<li>Developer of Rails with SublimeText2</li>
+</ul>
+
+
+<h1>目安時間 &ndash; Estimated Time to execute written in this post</h1>
+
+<ul>
+<li>0.5 minutes</li>
+</ul>
+
+
+<h1>方法 &ndash; The how.</h1>
+
+<p>SublimeTextはデフォルトではGuardfileなど見慣れない(拡張子が登録されていない)ファイルに色を付けてくれない</p>
+
+<p>その時は、SublimeTextの右下の「PlainText」という箇所から、</p>
+
+<p><code>PlainText -&gt; Open all with current extension as... -&gt; Ruby</code></p>
+
+<p>と選択。
+これで、次からはGUardfileがRuby形式で開かれる。</p>
+
+<p><img src="/images/posts/130817-guard/2.png" alt="2" /></p>
+]]></content>
+  </entry>
+  
+</feed>
