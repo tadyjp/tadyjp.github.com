@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tips | Oh! my tady]]></title>
   <link href="http://blog.tady.jp/blog/categories/tips/atom.xml" rel="self"/>
   <link href="http://blog.tady.jp/"/>
-  <updated>2013-08-17T15:45:35+09:00</updated>
+  <updated>2013-08-29T08:56:51+09:00</updated>
   <id>http://blog.tady.jp/</id>
   <author>
     <name><![CDATA[tady]]></name>
@@ -44,7 +44,7 @@
 <p><code>PlainText -&gt; Open all with current extension as... -&gt; Ruby</code></p>
 
 <p>と選択。
-これで、次からはGUardfileがRuby形式で開かれる。</p>
+これで、次からはGuardfileがRuby形式で開かれる。</p>
 
 <p><img src="/images/posts/130817-guard/2.png" alt="2" /></p>
 ]]></content>

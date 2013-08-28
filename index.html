@@ -8,8 +8,8 @@
 	<meta name="author" content="tady">
 
 	
-	<meta name="description" content="この記事の対象 &ndash; Target of this post. SublimeText2でRails開発をしている人
-Developer of Rails with SublimeText2 目安時間 &ndash; Estimated Time to execute written &hellip;">
+	<meta name="description" content="この記事は、 2013年夏現在、私の開発している「旅行EX」というサービスではelasticsearchを検索エンジンとして利用しています。
+開発が軌道に乗りはじめ、elasticsearchのノウハウが段々と溜まってきたので、「elasticsearch入門」 &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -88,6 +88,89 @@ Developer of Rails with SublimeText2 目安時間 &ndash; Estimated Time to exec
     <article class="post">
 	<h2 class="title">
 		
+		<a href="/posts/2013/08/29/elasticsearch-1">
+		
+			Elasticsearch入門 1 (連載予定)</a>
+	</h2>
+	<div class="entry-content">
+		<h2>この記事は、</h2>
+
+<p>2013年夏現在、私の開発している「<a href="http://ryokou-ex.jp">旅行EX</a>」というサービスでは<a href="http://www.elasticsearch.org/">elasticsearch</a>を検索エンジンとして利用しています。
+開発が軌道に乗りはじめ、elasticsearchのノウハウが段々と溜まってきたので、「elasticsearch入門」向けの記事としてまとめようと思います。</p>
+
+<h2>elasticsearchを使い始めたきっかけ</h2>
+
+<p>旅行EXでは、
+* rails4 (ruby2)
+* mongoDB
+* elasticsearch
+という構成で動いています。
+弊社では、もともとSolrを検索エンジンとして使う文化・ノウハウがあったのですが、
+自分の所属する新規事業グループでは、日々新しい技術の実際的利用による吸収が期待されているので、
+Solrの対抗馬とされているelasticsearchを使うことになりました。</p>
+
+<h2>elasticsearchとSolrの比較</h2>
+
+<p>実際のところできること、出来ないことは双方にあるのですが、
+elasticsearchに無くてSolrにあったらいいと思う機能は</p>
+
+<ul>
+<li><a href="http://d.hatena.ne.jp/shinobu_aoki/20111019/1319049699">Result Grouping</a></li>
+</ul>
+
+
+<p>くらいでしょうか。</p>
+
+<h2>基本的なデータ型</h2>
+
+<p>elasticsearchは <code>Core type</code> として以下の型が備わっています。
+* Stginr型
+* Number型
+* Date型
+* Boolean型
+* Binary型</p>
+
+<h2>参考</h2>
+
+<ul>
+<li><a href="http://wadap.hatenablog.com/entry/20121228/1356688302">elasticsearchでらくらく全文検索</a>
+*</li>
+</ul>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-29T08:36:00+09:00" pubdate data-updated="true">Aug 29<span>th</span>, 2013</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/elasticsearch/'>elasticsearch,</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+	
+</div></article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
 		<a href="/posts/2013/08/17/sublimetext2-guardfile-format">
 		
 			SublimeText2でGuardfileなどに色を付ける - Colorize Unregistered Format File Like &#8216;Guardfile&#8217; in SublimeText</a>
@@ -119,7 +202,7 @@ Developer of Rails with SublimeText2 目安時間 &ndash; Estimated Time to exec
 <p><code>PlainText -&gt; Open all with current extension as... -&gt; Ruby</code></p>
 
 <p>と選択。
-これで、次からはGUardfileがRuby形式で開かれる。</p>
+これで、次からはGuardfileがRuby形式で開かれる。</p>
 
 <p><img src="/images/posts/130817-guard/2.png" alt="2" /></p>
 
